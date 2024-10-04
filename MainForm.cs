@@ -1,0 +1,794 @@
+/*
+ * Created by SharpDevelop.
+ * User: razvan
+ * Date: 10/5/2024
+ * Time: 1:19 AM
+ * 
+ * To change this template use Tools | Options | Coding | Edit Standard Headers.
+ */
+using System;
+using System.Collections.Generic;
+using System.Drawing;
+using System.Windows.Forms;
+
+namespace combinedchars
+{
+	/// <summary>
+	/// Description of MainForm.
+	/// </summary>
+	public partial class MainForm : Form
+	{
+		public MainForm()
+		{
+			//
+			// The InitializeComponent() call is required for Windows Forms designer support.
+			//
+			InitializeComponent();
+			
+			//
+			// TODO: Add constructor code after the InitializeComponent() call.
+			//
+		}
+		void MainFormLoad(object sender, EventArgs e)
+		{
+	
+		}
+	
+        public char [] v = {'a','e','i','o','u'};
+		public char [] c = {'b','c','d','f','g','h','j','k','l','m','n','p','q','r','s','t','v','x','z','w','y'};
+		
+		public void vccomb()
+		{
+			for (int i = 0; i<v.Length;i++)
+			{
+			
+				for (int j = 0; j<c.Length;j++)
+				{
+					textBox1.Text += v[i].ToString() + c[j].ToString() + "\r\n";
+				}
+			}
+		}
+		
+		public void cvcomb()
+		{
+			for (int i = 0; i<c.Length;i++)
+			{
+			
+				for (int j = 0; j<v.Length;j++)
+				{
+					textBox1.Text += c[i].ToString() + v[j].ToString() + "\r\n";
+				}
+			}
+		}
+		
+		public void cccomb()
+		{
+			for (int i = 0; i<c.Length;i++)
+			{
+			
+				for (int j = 0; j<c.Length;j++)
+				{
+					textBox1.Text += c[i].ToString() + c[j].ToString() + "\r\n";
+				}
+			}
+		}
+		
+		public void vvcomb()
+		{
+			for (int i = 0; i<v.Length;i++)
+			{
+			
+				for (int j = 0; j<v.Length;j++)
+				{
+					textBox1.Text += v[i].ToString() + v[j].ToString() + "\r\n";
+				}
+			}
+		}
+		void Button1Click(object sender, EventArgs e)
+		{
+			textBox1.Text += " \r\n vc \r\n";
+			vccomb();
+			textBox1.Text += " \r\n cv \r\n";
+			cvcomb();
+			textBox1.Text += " \r\n cc \r\n";
+			cccomb();
+			textBox1.Text += " \r\n vv \r\n";
+			vvcomb();
+			
+			
+			
+			
+		}
+	}
+}
+
+
+
+/*
+ 
+ vc 
+ab
+ac
+ad
+af
+ag
+ah
+aj
+ak
+al
+am
+an
+ap
+aq
+ar
+as
+at
+av
+ax
+az
+aw
+ay
+eb
+ec
+ed
+ef
+eg
+eh
+ej
+ek
+el
+em
+en
+ep
+eq
+er
+es
+et
+ev
+ex
+ez
+ew
+ey
+ib
+ic
+id
+if
+ig
+ih
+ij
+ik
+il
+im
+in
+ip
+iq
+ir
+is
+it
+iv
+ix
+iz
+iw
+iy
+ob
+oc
+od
+of
+og
+oh
+oj
+ok
+ol
+om
+on
+op
+oq
+or
+os
+ot
+ov
+ox
+oz
+ow
+oy
+ub
+uc
+ud
+uf
+ug
+uh
+uj
+uk
+ul
+um
+un
+up
+uq
+ur
+us
+ut
+uv
+ux
+uz
+uw
+uy
+ 
+ cv 
+ba
+be
+bi
+bo
+bu
+ca
+ce
+ci
+co
+cu
+da
+de
+di
+do
+du
+fa
+fe
+fi
+fo
+fu
+ga
+ge
+gi
+go
+gu
+ha
+he
+hi
+ho
+hu
+ja
+je
+ji
+jo
+ju
+ka
+ke
+ki
+ko
+ku
+la
+le
+li
+lo
+lu
+ma
+me
+mi
+mo
+mu
+na
+ne
+ni
+no
+nu
+pa
+pe
+pi
+po
+pu
+qa
+qe
+qi
+qo
+qu
+ra
+re
+ri
+ro
+ru
+sa
+se
+si
+so
+su
+ta
+te
+ti
+to
+tu
+va
+ve
+vi
+vo
+vu
+xa
+xe
+xi
+xo
+xu
+za
+ze
+zi
+zo
+zu
+wa
+we
+wi
+wo
+wu
+ya
+ye
+yi
+yo
+yu
+ 
+ cc 
+bb
+bc
+bd
+bf
+bg
+bh
+bj
+bk
+bl
+bm
+bn
+bp
+bq
+br
+bs
+bt
+bv
+bx
+bz
+bw
+by
+cb
+cc
+cd
+cf
+cg
+ch
+cj
+ck
+cl
+cm
+cn
+cp
+cq
+cr
+cs
+ct
+cv
+cx
+cz
+cw
+cy
+db
+dc
+dd
+df
+dg
+dh
+dj
+dk
+dl
+dm
+dn
+dp
+dq
+dr
+ds
+dt
+dv
+dx
+dz
+dw
+dy
+fb
+fc
+fd
+ff
+fg
+fh
+fj
+fk
+fl
+fm
+fn
+fp
+fq
+fr
+fs
+ft
+fv
+fx
+fz
+fw
+fy
+gb
+gc
+gd
+gf
+gg
+gh
+gj
+gk
+gl
+gm
+gn
+gp
+gq
+gr
+gs
+gt
+gv
+gx
+gz
+gw
+gy
+hb
+hc
+hd
+hf
+hg
+hh
+hj
+hk
+hl
+hm
+hn
+hp
+hq
+hr
+hs
+ht
+hv
+hx
+hz
+hw
+hy
+jb
+jc
+jd
+jf
+jg
+jh
+jj
+jk
+jl
+jm
+jn
+jp
+jq
+jr
+js
+jt
+jv
+jx
+jz
+jw
+jy
+kb
+kc
+kd
+kf
+kg
+kh
+kj
+kk
+kl
+km
+kn
+kp
+kq
+kr
+ks
+kt
+kv
+kx
+kz
+kw
+ky
+lb
+lc
+ld
+lf
+lg
+lh
+lj
+lk
+ll
+lm
+ln
+lp
+lq
+lr
+ls
+lt
+lv
+lx
+lz
+lw
+ly
+mb
+mc
+md
+mf
+mg
+mh
+mj
+mk
+ml
+mm
+mn
+mp
+mq
+mr
+ms
+mt
+mv
+mx
+mz
+mw
+my
+nb
+nc
+nd
+nf
+ng
+nh
+nj
+nk
+nl
+nm
+nn
+np
+nq
+nr
+ns
+nt
+nv
+nx
+nz
+nw
+ny
+pb
+pc
+pd
+pf
+pg
+ph
+pj
+pk
+pl
+pm
+pn
+pp
+pq
+pr
+ps
+pt
+pv
+px
+pz
+pw
+py
+qb
+qc
+qd
+qf
+qg
+qh
+qj
+qk
+ql
+qm
+qn
+qp
+qq
+qr
+qs
+qt
+qv
+qx
+qz
+qw
+qy
+rb
+rc
+rd
+rf
+rg
+rh
+rj
+rk
+rl
+rm
+rn
+rp
+rq
+rr
+rs
+rt
+rv
+rx
+rz
+rw
+ry
+sb
+sc
+sd
+sf
+sg
+sh
+sj
+sk
+sl
+sm
+sn
+sp
+sq
+sr
+ss
+st
+sv
+sx
+sz
+sw
+sy
+tb
+tc
+td
+tf
+tg
+th
+tj
+tk
+tl
+tm
+tn
+tp
+tq
+tr
+ts
+tt
+tv
+tx
+tz
+tw
+ty
+vb
+vc
+vd
+vf
+vg
+vh
+vj
+vk
+vl
+vm
+vn
+vp
+vq
+vr
+vs
+vt
+vv
+vx
+vz
+vw
+vy
+xb
+xc
+xd
+xf
+xg
+xh
+xj
+xk
+xl
+xm
+xn
+xp
+xq
+xr
+xs
+xt
+xv
+xx
+xz
+xw
+xy
+zb
+zc
+zd
+zf
+zg
+zh
+zj
+zk
+zl
+zm
+zn
+zp
+zq
+zr
+zs
+zt
+zv
+zx
+zz
+zw
+zy
+wb
+wc
+wd
+wf
+wg
+wh
+wj
+wk
+wl
+wm
+wn
+wp
+wq
+wr
+ws
+wt
+wv
+wx
+wz
+ww
+wy
+yb
+yc
+yd
+yf
+yg
+yh
+yj
+yk
+yl
+ym
+yn
+yp
+yq
+yr
+ys
+yt
+yv
+yx
+yz
+yw
+yy
+ 
+ vv 
+aa
+ae
+ai
+ao
+au
+ea
+ee
+ei
+eo
+eu
+ia
+ie
+ii
+io
+iu
+oa
+oe
+oi
+oo
+ou
+ua
+ue
+ui
+uo
+uu
+
+ 
+ */
